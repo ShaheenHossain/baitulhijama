@@ -94,7 +94,7 @@
         </field>
     </record>
 
-   <record id="action_baitulhijama_report" model="ir.actions.report">
+<!--   <record id="action_baitulhijama_report" model="ir.actions.report">
         <field name="name">Baitul Hijama Report</field>
         <field name="model">crm.bhf</field>
         <field name="report_type">qweb-pdf</field>
@@ -102,7 +102,7 @@
         <field name="report_file">baitulhijama.report_baitulhijama_patient_form</field>
         <field name="binding_model_id" ref="model_crm_bhf"/>
         <field name="binding_type">report</field>
-    </record>
+    </record>-->
 
 
     <menuitem id="baitulhijama_root" name="Baitul Hijama Patient" sequence="10"/>
