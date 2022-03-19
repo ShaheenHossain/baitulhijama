@@ -2,6 +2,7 @@
 <odoo>
     <data>
 
+<!--
         <template id="report_baitulhijama_patient_form">
 
             <t t-call="web.html_container">
@@ -59,5 +60,6 @@
                 </t>
             </t>
         </template>
+-->
     </data>
 </odoo>
