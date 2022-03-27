@@ -119,8 +119,8 @@
     </record>-->
 
 
-    <menuitem id="baitulhijama_root" name="Baitul Hijama Patient" sequence="10" web_icon="baitulhijama,static/description/icon.png/>
-    <menuitem id="baitulhijama_helpdesk_root" name="Patient Details"  parent="baitulhijama_root" sequence="10"/>
+    <menuitem id="baitulhijama_root" name="Baitul Hijama Patient" sequence="10" web_icon="baitulhijama,static/description/icon.png"/>
+    <menuitem id="baitulhijama_helpdesk_root" name="Patient Details" parent="baitulhijama_root" sequence="10"/>
     <menuitem id="baitulhijama_helpdesk" name="Patient Details Information" parent="baitulhijama_helpdesk_root" action="baitulhijma_action_ticket" sequence="10"/>
 
 
