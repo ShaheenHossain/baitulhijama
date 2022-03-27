@@ -1,9 +1,23 @@
 # -*- coding: utf-8 -*-
-from odoo import api, fields, models
+# from odoo import api, fields, models
+from odoo import fields, models, _, api
 
 class CRMBHF(models.Model):
     _name = "crm.bhf"
     _description = "CRM BHF"
+
+    @api.model
+    def create(self, vals):
+        """Overriding the create method and assigning
+        the the sequence for the record"""
+        if vals.get('application_no', _('New')) == _('New'):
+            vals['application_no'] = self.env['ir.sequence'].next_by_code(
+                'crm.bhf') or _('New')
+        res = super(CRMBHF, self).create(vals)
+        return res
+
+    application_no = fields.Char(string='Patient No', required=True, copy=False, readonly=True, index=True, default=lambda self: _('New'))
+
 
     patient_question = fields.Char(string='রোগীর নাম')
     ticket_id = fields.Many2one('crm.bhf', string='Ticket ID')
