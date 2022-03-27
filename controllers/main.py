@@ -70,30 +70,13 @@ class baitulhijama(http.Controller):
 
         print("BHF Values_01:", bhf_val)
 
-        # ticket_id: any = request.env['crm.bhf'].sudo().create(bhf_val)
-        # bhf_val['ticket_no'] = 'BHF-'+now.strftime('%Y')+'-' + str(ticket_id[0].id)
-        # # print("BHF Values:", int(ticket_id[0].id))
 
+        ticket_id: any = request.env['crm.bhf'].sudo().create(bhf_val)
+        bhf_val['ticket_no'] = 'BHF-'+now.strftime('%Y')+'-' + str(ticket_id[0].id)
+        # # print("BHF Values:", int(ticket_id[0].id))
         return request.render("baitulhijama.ticket_welcome", bhf_val)
 
-
-        @http.route(['/helpdesk/feedback/'], type='http', auth='public', website=True)
-        def start_rating(self, **kw):
-            partner_id = kw['partner_id']
-            user_id = kw['ticket_id']
-            ticket_obj = request.env['helpdesk.support'].browse(int(user_id))
-            # if partner_id == UserInput.partner_id.id:
-            vals = {
-                'rating': kw['star'],
-                'comment': kw['comment'],
-            }
-            ticket_obj.sudo().write(vals)
-            customer_msg = _(ticket_obj.partner_id.name + 'has send this feedback rating is %s and comment is %s') % (
-            kw['star'], kw['comment'],)
-            ticket_obj.sudo().message_post(body=customer_msg)
-            return http.request.render("website_helpdesk_support_ticket.successful_feedback")
-
-            #     'ticket_no': 'BHF-' + now.strftime('%Y') + '-' + str(ticket_id[0].id),
+        #     'ticket_no': 'BHF-' + now.strftime('%Y') + '-' + str(ticket_id[0].id),
         #     'name': kw.get('name'),
         #     'patient_age': kw.get('patient_age'),
         #     'marital_status': kw.get('marital_status'),

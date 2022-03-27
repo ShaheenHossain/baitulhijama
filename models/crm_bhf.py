@@ -53,32 +53,16 @@ class CRMBHF(models.Model):
     ques_35 = fields.Boolean(string='কোনো কারণ ছাড়া কারো প্রতি অতিরিক্ত আকৃষ্ট হয়ে যাওয়া')
     other_problems = fields.Text(string='অন্য কোনো সমস্যা (যদি থাকে)')
     promising_true = fields.Boolean(string='আমি কন্ডিশন গুলো পড়েছি এবং স্বীকারোক্তি দিচ্ছি')
-
     payment_method = fields.Selection([('bkash', 'বিকাশ'), ('nagad', 'নগদ'), ('rocket', 'রকেট')], string='পেমেন্ট পদ্ধতি')
     payment_transactionid = fields.Text(string='পেমেন্ট ট্রানসাকশান আইডি দিন (required)', required=True)
-
-
-
     tenant = fields.Text(string='Tenant')
-    # mobile = fields.Text(string='Mobile Number', required=True)
-    # email = fields.Text(string='Email Address')
     building = fields.Text(string='Building')
     flat = fields.Text(string='Flat')
-
     problem_type = fields.Text(string='Problem Type')
     problem_category = fields.Text(string='Problem Category')
-
     property = fields.Text(string='Property')
     problem = fields.Text(string='Problem')
     work_type = fields.Text(string='Type of Work')
     problem_detail = fields.Text(string='Problem Detail')
     priority = fields.Text(string='Priority')
-    # address = fields.Text(string='Address')
     ticket_no = fields.Text(string='Patient No.')
-    #option = fields.Text(string='Option')
-
-    # def onchange_patient(self, cr, uid, ids, patient_question=False, context=None):
-    #     if patient_question:
-    #         return {'value': {'boolean': True}}
-    #     else:
-    #         return {'value': {'boolean': False}}
