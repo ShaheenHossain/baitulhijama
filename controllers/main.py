@@ -71,7 +71,7 @@ class baitulhijama(http.Controller):
         print("BHF Values_01:", bhf_val)
 
 
-        ticket_id: any = request.env['crm.bhf'].sudo().create(bhf_val)
+        ticket_id = request.env['crm.bhf'].sudo().create(bhf_val)
         bhf_val['ticket_no'] = 'BHF-'+now.strftime('%Y')+'-' + str(ticket_id[0].id)
         # # print("BHF Values:", int(ticket_id[0].id))
         return request.render("baitulhijama.ticket_welcome", bhf_val)
