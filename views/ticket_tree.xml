@@ -7,54 +7,59 @@
         <field name="arch" type="xml">
             <form string="Patient form">
                 <sheet>
-                    <group col='3'>
-                        <field name="name" string="Name"/>
-                        <field name="patient_age"/>
-                        <field name="marital_status"/>
-                        <field name="father_name"/>
-                        <field name="mother_name"/>
-                        <field name="mobile"/>
-                        <field name="whatsapp_imo"/>
-                        <field name="email" />
-                        <field name="address"/>
-                        <field name="ques_01" />
-                        <field name="ques_02"/>
-                        <field name="ques_03"/>
-                        <field name="ques_04"/>
-                        <field name="ques_05"/>
-                        <field name="ques_06"/>
-                        <field name="ques_07"/>
-                        <field name="ques_08"/>
-                        <field name="ques_09"/>
-                        <field name="ques_10"/>
-                        <field name="ques_11"/>
-                        <field name="ques_12"/>
-                        <field name="ques_13"/>
-                        <field name="ques_14"/>
-                        <field name="ques_15"/>
-                        <field name="ques_16"/>
-                        <field name="ques_17"/>
-                        <field name="ques_18"/>
-                        <field name="ques_19"/>
-                        <field name="ques_20"/>
-                        <field name="ques_21"/>
-                        <field name="ques_22"/>
-                        <field name="ques_23"/>
-                        <field name="ques_24"/>
-                        <field name="ques_25"/>
-                        <field name="ques_26"/>
-                        <field name="ques_27"/>
-                        <field name="ques_28"/>
-                        <field name="ques_29"/>
-                        <field name="ques_30"/>
-                        <field name="ques_31"/>
-                        <field name="ques_32"/>
-                        <field name="ques_33"/>
-                        <field name="ques_34"/>
-                        <field name="ques_35"/>
-                        <field name="promising_true"/>
-                        <field name="payment_method"/>
-                        <field name="payment_transactionid"/>
+                    <group>
+                        <group>
+                            <field name="ticket_no" string="Patient No."/>
+                            <field name="name" string="Name"/>
+                            <field name="patient_age"/>
+                            <field name="marital_status"/>
+                            <field name="father_name"/>
+                            <field name="mother_name"/>
+                            <field name="mobile"/>
+                            <field name="whatsapp_imo"/>
+                            <field name="email" />
+                            <field name="address"/>
+                            <field name="ques_01" />
+                            <field name="ques_02"/>
+                            <field name="ques_03"/>
+                            <field name="ques_04"/>
+                            <field name="ques_05"/>
+                            <field name="ques_06"/>
+                            <field name="ques_07"/>
+                            <field name="ques_08"/>
+                            <field name="ques_09"/>
+                            <field name="ques_10"/>
+                            <field name="ques_11"/>
+                            <field name="ques_12"/>
+                            <field name="ques_13"/>
+                            <field name="ques_14"/>
+                            <field name="ques_15"/>
+                            <field name="ques_16"/>
+                            <field name="ques_17"/>
+                        </group>
+                        <group>
+                            <field name="ques_18"/>
+                            <field name="ques_19"/>
+                            <field name="ques_20"/>
+                            <field name="ques_21"/>
+                            <field name="ques_22"/>
+                            <field name="ques_23"/>
+                            <field name="ques_24"/>
+                            <field name="ques_25"/>
+                            <field name="ques_26"/>
+                            <field name="ques_27"/>
+                            <field name="ques_28"/>
+                            <field name="ques_29"/>
+                            <field name="ques_30"/>
+                            <field name="ques_31"/>
+                            <field name="ques_32"/>
+                            <field name="ques_33"/>
+                            <field name="ques_34"/>
+                            <field name="ques_35"/>
+                            <field name="promising_true"/>
+                            <field name="payment_method"/>
+                            <field name="payment_transactionid"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -68,6 +73,7 @@
         <field name="model">crm.bhf</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="ticket_no" string="Patient No."/>
                 <field name="name" string="Name"/>
                 <field name="patient_age"/>
                 <field name="marital_status"/>
