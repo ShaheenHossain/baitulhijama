@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="bhf" name="Pataint Form">
+    <template id="bhf" name="Patient Form">
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="oe_structure">
